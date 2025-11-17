@@ -18,7 +18,7 @@ body {
   background-color: whitesmoke;
   padding: 15px;
   border: 2px solid #93c5fd;
-  flex-wrap: wrap;   /* Important for mobile */
+  flex-wrap: wrap;   
 }
 
 .logo img {
@@ -50,7 +50,7 @@ body {
   justify-content: space-between;
   margin-top: 20px;
   gap: 20px;
-  flex-wrap: wrap;  /* Responsive layout */
+  flex-wrap: wrap;  
 }
 
 /* Left Section */
@@ -108,11 +108,9 @@ body {
 }
 
 
-/* ----------------------------------
-   📱 RESPONSIVE MEDIA QUERIES
----------------------------------- */
 
-/* Tablets */
+
+
 @media (max-width: 992px) {
 
   .main {

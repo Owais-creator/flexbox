@@ -18,21 +18,20 @@ body {
   background-color: whitesmoke;
   padding: 15px;
   border: 2px solid #93c5fd;
+  flex-wrap: wrap;   /* Important for mobile */
 }
 
-.logo {
- 
-  padding: 10px 20px;
-  border-radius: 5px;
+.logo img {
+  width: 120px;
 }
 
 .menu {
   display: flex;
   gap: 15px;
+  flex-wrap: wrap;
 }
 
 .menu a {
-  
   color: blue;
   text-decoration: none;
   padding: 8px 15px;
@@ -44,28 +43,20 @@ body {
   background-color: #818cf8;
 }
 
+
 /* Main Layout */
 .main {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
   gap: 20px;
+  flex-wrap: wrap;  /* Responsive layout */
 }
 
-
-/* .left-section {
-  flex: 3;
-  background-color: #e0f2fe;
-  padding: 15px;
-  border-radius: 8px;
-  border: 2px solid #7dd3fc;
-} */
-
+/* Left Section */
 .left-section {
-  display: flex;
-  flex-direction: column;  
-  justify-content: flex-start; 
-  height: 300px; 
+  flex: 3;
+  position: relative;
   background-color: #e0f2fe;
   padding: 15px;
   border-radius: 8px;
@@ -74,30 +65,27 @@ body {
 
 .left-section h2 {
   color: blue;
-  margin-top: 80px;
-  position: absolute;
-  font-size: 40px;
+  font-size: 35px;
+  margin-bottom: 20px;
 }
 
 .image {
   background-image: url(./0-ent-intelcore-i5-2400-128ssd-1tbhdd-16gb-22inch-entwino-original-imahavnnhfyknd4c.webp);
-  width: 400px;
-  height: 200px;
+  width: 100%;
+  height: 250px;
   border-radius: 5px;
-  margin: 10px 0;
-  display: flex;
-  /* align-items: flex-end; */
-  justify-content: flex-end;
-  margin-left: 500px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
+  background-size: cover;
+  background-position: center;
 }
 
 .left-section p {
-  margin-top: 10px;
+  font-size: 16px;
   line-height: 1.5;
 }
 
 
+/* Right Section */
 .right-section {
   flex: 1;
   background-color: #fef3c7;
@@ -117,4 +105,50 @@ body {
 
 .right-section li {
   margin-bottom: 8px;
+}
+
+
+/* ----------------------------------
+   📱 RESPONSIVE MEDIA QUERIES
+---------------------------------- */
+
+/* Tablets */
+@media (max-width: 992px) {
+
+  .main {
+    flex-direction: column;
+  }
+
+  .image {
+    height: 200px;
+  }
+
+  .left-section h2 {
+    font-size: 30px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .menu {
+    justify-content: center;
+  }
+
+  .left-section h2 {
+    font-size: 25px;
+  }
+
+  .image {
+    height: 180px;
+  }
+
+  .right-section {
+    width: 100%;
+  }
 }
